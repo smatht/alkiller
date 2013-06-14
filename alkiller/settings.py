@@ -1,10 +1,11 @@
 # Django settings for alkiller project.
+#encoding:utf-8
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Matias G. Sticchi', 'matgs656@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -20,6 +21,10 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default.
     }
 }
+
+# Identificando la ruta del proyecto
+import os
+RUTA_PROYECTO = os.path.dirname(os.path.realpath(__file__))
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
