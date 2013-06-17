@@ -1,0 +1,46 @@
+.. date: 2012/12/31 20:40:41
+.. class:: hero-unit span6
+
+Nikola is a Static Site and Blog Generator
+------------------------------------------
+
+In goes content, out comes a website, ready to deploy.
+
+
+**Why Static Websites?**
+
+Static websites are safer, use fewer resources, and avoid vendor and platform lock-in.
+You can read more about this in the `Nikola Handbook. </handbook.html#why-static>`__
+
+.. raw:: html
+
+   <a class="btn btn-danger btn-large" href="http://nikola-generator.googlecode.com/files/nikola-5.4.4.zip"><i class="icon-download-alt icon-white"></i> Get Nikola (v5.4.4)</a>
+
+.. class:: span5
+
+What Can Nikola Do?
+-------------------
+
+It has many features, but here are some of the nicer ones:
+
+.. class:: nav-list
+
+* `Blogs, with tags, feeds, archives, comments, etc. <some-sites-using-nikola.html>`_
+* `Themable <theming.html>`_
+* Fast builds, thanks to `doit <http://python-doit.sf.net>`_
+* Flexible, extensible via plugins
+* Small codebase (programmers can understand all of Nikola core in a day)
+* `reStructuredText <quickstart.html>`_ [`Cheatsheet <http://ubuntuone.com/1M7C5fdbLkggF7ptoUvTq8>`_] or Markdown as input language (also Wiki, BBCode, Textile, and HTML)
+* Easy `image galleries </galleries/demo/>`_ (just drop files in a folder!)
+* Syntax highlighting for almost any programming language or markup
+* Multilingual sites, `translated to 13 languages <https://www.transifex.com/projects/p/nikola/>`_.
+* Doesn't reinvent wheels, leverages existing tools.
+* Python 2 and 3 compatible.
+* Is it a good idea to try github master today? |status|
+
+.. |status| image:: https://travis-ci.org/ralsina/nikola.png?branch=master
+            :target: https://travis-ci.org/ralsina/nikola
+
+.. raw:: html
+
+   </div>

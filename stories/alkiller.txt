@@ -1,0 +1,40 @@
+.. title: Alkiller
+.. date: 2012/12/31 20:40:41
+.. class:: hero-unit span6
+
+Sistema de Administración de Alquileres
+---------------------------------------
+
+Proyecto de Trabajo Final de Aplicación.
+
+
+**Tecnologia utilizada**
+
+Python+Django (backend), NodeJS (realtime), HTML5, Backbone.js (frontend).
+Puedes leer mas sobre el proyecto `Aquí. </handbook.html#why-static>`__
+
+.. raw:: html
+
+   <a class="btn btn-danger btn-large" href="https://github.com/smatht/alkiller"><i class="icon-download-alt icon-white"></i> Fork on Github</a>
+
+.. class:: span5
+
+Que puedes hacer con Alkiller?
+------------------------------
+
+Tendrá muchas funcionalidades, aquí listamos algunas:
+
+.. class:: nav-list
+
+* Manejo de inmuebles y departamentos
+* Múltiples usuarios
+* Control de pagos en tiempo y forma
+* Registro y manejo de incidencias en los departamentos
+* Visualización de reportes
+* Adaptado a cualquier tamaño de pantalla
+* Version movil
+* Sincronizacion en tiempo real
+
+.. raw:: html
+
+   </div>
