@@ -10,7 +10,7 @@ Proyecto de Trabajo Final de Aplicación.
 
 **Tecnologia utilizada**
 
-Python+Django (backend), NodeJS (realtime), HTML5, Backbone.js (frentend).
+Python+Django (backend), NodeJS (realtime), HTML5, Backbone.js (frontend).
 Puedes leer mas sobre el proyecto `Aquí. </handbook.html#why-static>`__
 
 .. raw:: html
