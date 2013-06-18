@@ -894,39 +894,7 @@ If you make it so your listing ends before it starts, it's frowned upon and noth
 .. gist:: 2395294
 </pre>
 <p>Producing this:</p>
-<script src="https://gist.github.com/2395294.js"></script><noscript><pre class="literal-block">
-#include &lt;stdlib.h&gt;
-#include &lt;stdio.h&gt;
-
-int nonHeapInt;
-
-struct HeapObject
-{
-    int x;  // 因為如果找 x 的 pointer，實際上和找 HeapObject 的開頭 pointer 相同，
-            // 所以我們必需加一個y，讓我們指定 pointer 時不會指到 HeapObject 的開頭。
-    int y;
-};
-
-int main()
-{
-    struct HeapObject * heapObject = malloc(sizeof(struct HeapObject));
-
-    nonHeapInt = 10;
-    heapObject-&gt;y = 20;
-
-    printf(&quot;Start nonHeapInt:%d\n&quot;, nonHeapInt);
-    printf(&quot;Start heapObject-&gt;y:%d\n&quot;, heapObject-&gt;y);
-
-    // free(&amp;nonHeapInt); // GCC 會警告，執行 glibc 會丟 invalid pointer exception
-    // free(&amp;(heapObject-&gt;y)); // 雖然不會景告，但 glibc 還是會丟 invalid pointer exception
-
-    printf(&quot;End nonHeapInt:%d\n&quot;, nonHeapInt);
-    printf(&quot;End heapObject-&gt;y:%d\n&quot;, heapObject-&gt;y);
-
-}
-
-</pre>
-</noscript><p>This degrades gracefully if the browser doesn't support javascript.</p>
+<p>This degrades gracefully if the browser doesn't support javascript.</p>
 </div>
 <div class="section" id="slideshows">
 <h3><a class="toc-backref" href="#id35">Slideshows</a></h3>

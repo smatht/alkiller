@@ -10,10 +10,10 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Matias G. Sticchi"
-BLOG_TITLE = "Alkiller Blog"
+BLOG_TITLE = "Proyecto Alkiller"
 # This is the main URL for your site. It will be used
 # in a prominent link
-SITE_URL = "http://nikola.ralsina.com.ar"
+SITE_URL = "http://smatht.github.io/alkiller/"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://nikola.ralsina.com.ar"
@@ -55,9 +55,11 @@ TRANSLATIONS = {
 # You should provide a key-value pair for each used language.
 SIDEBAR_LINKS = {
     DEFAULT_LANG: (
-        ('/archive.html', 'Archives'),
-        ('/categories/index.html', 'Tags'),
-        ('/rss.xml', 'RSS'),
+        ('/sdgfsdg.html', 'Documentación'),
+        ('/blog', 'Blog'),
+        ('https://github.com/smatht/alkiller.git', 'Codigo fuente'),
+        #('/categories/index.html', 'Tags'),
+        #('/rss.xml', 'RSS'),
     ),
 }
 
@@ -89,8 +91,8 @@ SIDEBAR_LINKS = {
 #
 
 post_pages = (
-    ("posts/*.txt", "posts", "post.tmpl", True),
-    ("stories/*.txt", "stories", "story.tmpl", False),
+    ("pages/*.txt", "", "story.tmpl", False),
+    ("posts/*.txt", "blog", "post.tmpl", True),
 )
 
 # One or more folders containing files to be copied as-is into the output.
@@ -141,7 +143,7 @@ post_compilers = {
 # TAG_PAGES_ARE_INDEXES = True
 
 # Final location is output / TRANSLATION[lang] / INDEX_PATH / index-*.html
-# INDEX_PATH = ""
+INDEX_PATH = "blog"
 
 # Create per-month archives instead of per-year
 # CREATE_MONTHLY_ARCHIVE = False
@@ -232,7 +234,7 @@ post_compilers = {
 # INDEXES_PAGES = ""  # If this is empty, the default is 'old posts page %d' translated
 
 # Name of the theme to use.
-# THEME = 'site'
+THEME = 's'
 
 # Color scheme to be used for code blocks. If your theme provide "assets/css/code.css" this
 # is ignored.

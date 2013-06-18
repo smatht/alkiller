@@ -5,113 +5,173 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>http://nikola.ralsina.com.ar</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/2013/</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/2013/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/2013/index.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/2013/index.html</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/blog/</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/archive.html</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/blog/bienvenido-a-alkiller-blog.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/assets/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/blog/index.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/assets/css/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/blog/probando.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/assets/css/images/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/categories/</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/assets/css/images/ie6/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/categories/blog.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/assets/img/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/categories/demo.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/assets/js/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/categories/index.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/categories/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/categories/nikola.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/categories/index.html</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/categories/python.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/galleries/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/galleries/</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/galleries/demo/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/galleries/demo/</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/galleries/demo/index.html</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/galleries/demo/index.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/galleries/index.html</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/galleries/index.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/images/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/listings/</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/listings/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/listings/hello.py.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/listings/hello.py.html</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/listings/index.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/listings/index.html</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/posts/bienvenido-a-alkiller-blog.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/posts/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/posts/probando.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://nikola.ralsina.com.ar/stories/</loc>
-  <lastmod>2013-06-14</lastmod>
+  <loc>http://smatht.github.io/alkiller/stories/</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/about-nikola.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/alkiller.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/creating-a-theme.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/documentation.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/handbook.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/index.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/listings-demo.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/quickref.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/quickstart.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/sampleconfig.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/slides-demo.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/stories/theming.html</loc>
+  <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
 </urlset>
