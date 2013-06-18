@@ -234,7 +234,7 @@ INDEX_PATH = "blog"
 # INDEXES_PAGES = ""  # If this is empty, the default is 'old posts page %d' translated
 
 # Name of the theme to use.
-THEME = 's'
+#THEME = 's'
 
 # Color scheme to be used for code blocks. If your theme provide "assets/css/code.css" this
 # is ignored.
