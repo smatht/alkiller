@@ -1,0 +1,12 @@
+.. link: 
+.. description: 
+.. tags: 
+.. date: 2013/06/19 09:36:03
+.. title: El repositorio de codigo
+.. slug: el-repositorio-de-codigo
+
+El repositorio de codigo (git) del proyecto ya esta alojado en Github con acceso publico `<https://github.com/smatht/alkiller.git>`_.
+
+Cualquier persona que quiera hacer contribuciones al codigo puede hacerlo haciendo un fork del repo. Aquí una `guia para hacer un fork. <http://aprendegit.com/fork-de-repositorios-para-que-sirve/?goback=%2Egde_3956944_member_214176162>`_
+
+Puede encontrar una guia de instalacion en el mismo repositorio.

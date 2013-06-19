@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="es"><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="utf-8"><meta name="description" content=""><meta name="author" content="Matias G. Sticchi"><title>El proyecto en la nube de Heroku | Proyecto Alkiller</title><link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"><link href="../assets/css/rst.css" rel="stylesheet" type="text/css"><link href="../assets/css/code.css" rel="stylesheet" type="text/css"><link href="../assets/css/colorbox.css" rel="stylesheet" type="text/css"><link href="../assets/css/theme.css" rel="stylesheet" type="text/css"><link href="../assets/css/custom.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]--><link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml"></head><body>
+<!-- Menubar -->
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+
+            <a class="brand" href="../">
+            Proyecto Alkiller
+            </a>
+            <!-- Everything you want hidden at 940px or less, place within here -->
+            <div class="nav-collapse collapse">
+                <ul class="nav"><li><a href="../sdgfsdg.html">Documentación</a>
+            </li><li><a href="../blog">Blog</a>
+            </li><li><a href="https://github.com/smatht/alkiller.git">Codigo fuente</a>
+
+                </li></ul><ul class="nav pull-right"><li>
+    <a href="el-proyecto-en-la-nube-de-heroku.txt" id="sourcelink">Código</a>
+    </li>
+
+                </ul></div>
+        </div>
+    </div>
+</div>
+<!-- End of Menubar -->
+<div class="container-fluid" id="container-fluid">
+    <!--Body content-->
+    <div class="row-fluid">
+    <div class="span2"></div>
+    <div class="span8">
+    
+    <div class="postbox">
+    
+    <h1>El proyecto en la nube de Heroku</h1>
+
+    <hr><small>
+        Publicado: <time class="published" datetime="2013-06-19T10:07:00">19-06-2013 10:07</time></small>
+    <hr><!-- link: --><!-- description: --><!-- tags: --><!-- date: 2013/06/19 10:07:00 --><!-- title: El proyecto en la nube de Heroku --><!-- slug: el-proyecto-en-la-nube-de-heroku --><p>El proyecto de Trabajo Final de Aplicacion ya se encuentra alojado en la nube de Heroku para el acceso publico: <a class="reference external" href="http://alkiller-inkiller.herokuapp.com/">http://alkiller-inkiller.herokuapp.com/</a></p>
+<div class="figure">
+<a class="reference external image-reference" href="http://siliconangle.com/files/2011/03/heroku.jpg"><img alt="Heroku deploy and scale powerful apps" class="thumbnail" src="http://siliconangle.com/files/2011/03/heroku.jpg"></a>
+</div>
+<p>Heroku es una plataforma como servicio de computación en la Nube que soporta distintos lenguajes de programación. En este caso se esta alojando en el servidor una aplicación <strong>Python</strong> que utiliza el framework <strong>Django.</strong></p>
+<div class="section" id="pasos-para-empezar-con-django-en-heroku">
+<h2>Pasos para empezar con Django en Heroku</h2>
+<p>Esta guia fue extraida del devcenter de heroku <a class="reference external" href="https://devcenter.heroku.com/articles/django">https://devcenter.heroku.com/articles/django</a>.</p>
+<div class="section" id="prerequisitos">
+<h3>Prerequisitos:</h3>
+<ul class="simple"><li>Instalar <a class="reference external" href="https://toolbelt.heroku.com/">Heroku toolbelt.</a></li>
+<li>Instalar <a class="reference external" href="http://python.org">Python</a> y <a class="reference external" href="https://pypi.python.org/pypi/virtualenv">Virtualenv.</a> Puede seguir <a class="reference external" href="http://docs.python-guide.org/en/latest/starting/install/linux/">ésta guia.</a></li>
+<li>Tener instalada una versión de <a class="reference external" href="http://www.postgresql.org/">Postgres</a> en la máquina local.</li>
+<li>Tener una <a class="reference external" href="https://id.heroku.com/signup/devcenter">cuenta en Heroku.</a></li>
+</ul></div>
+<div class="section" id="crear-un-django-app-dentro-de-virtualenv">
+<h3>Crear un Django app dentro de Virtualenv:</h3>
+<p>Creamos el entorno virtual:</p>
+<pre class="literal-block">
+$ virtualenv venv --distribute
+</pre>
+<p>Para utilizar nuestro nuevo virtualenv, necesitamos activarlo.</p>
+<pre class="literal-block">
+$ source venv/bin/activate
+</pre>
+<p>A continuación, instalar las dependencias de nuestra aplicación con pip. En este caso, vamos a instalar Django (el framework de desarrollo web), Gunicorn (el servidor web), y el dj- base -url (un ayudante de configuración de Django):</p>
+<pre class="literal-block">
+$ pip install Django psycopg2 gunicorn dj-database-url
+</pre>
+<p>Ahora que tenemos un entorno Python limpio para trabajar, vamos a crear nuestra aplicación Django.</p>
+<pre class="literal-block">
+django-admin.py startproject hellodjango .
+</pre>
+</div>
+<div class="section" id="declacion-de-tipos-de-procesos-con-procfile">
+<h3>Declación de tipos de procesos con ProcFile:</h3>
+<p>Un <a class="reference external" href="https://devcenter.heroku.com/articles/procfile">ProcFile,</a> es un archivo de texto en el directorio raíz de la aplicación. Vamos a declarar explícitamente qué comando se debe ejecutar para iniciar un banco de pruebas web. En este caso, usted necesita para ejecutar Gunicorn con algunos argumentos.</p>
+<p>Cree un archivo (sin extención) llamado Procfile en el directorio raiz de su aplicación con el siguiente contenido:</p>
+<pre class="literal-block">
+web: gunicorn hellodjango.wsgi
+</pre>
+<p>Para iniciar el servidor web:</p>
+<pre class="literal-block">
+$ foreman start
+</pre>
+</div>
+<div class="section" id="configuraciones-django">
+<h3>Configuraciones Django:</h3>
+<p>Pasamos a configurar la aplicacion para el funcionamiento en Heroku. Agregamos lo siguiente al final del archivo settings.py:</p>
+<pre class="code python literal-block">
+<span class="c"># Parse database configuration from $DATABASE_URL</span>
+<span class="kn">import</span> <span class="nn">dj_database_url</span>
+<span class="n">DATABASES</span><span class="p">[</span><span class="s">'default'</span><span class="p">]</span> <span class="o">=</span>  <span class="n">dj_database_url</span><span class="o">.</span><span class="n">config</span><span class="p">()</span>
+
+<span class="c"># Honor the 'X-Forwarded-Proto' header for request.is_secure()</span>
+<span class="n">SECURE_PROXY_SSL_HEADER</span> <span class="o">=</span> <span class="p">(</span><span class="s">'HTTP_X_FORWARDED_PROTO'</span><span class="p">,</span> <span class="s">'https'</span><span class="p">)</span>
+</pre>
+</div>
+<div class="section" id="creando-el-repositorio-git">
+<h3>Creando el repositorio Git:</h3>
+<p>Vamos a crear un nuevo repositorio git y guardar los cambios.</p>
+<pre class="literal-block">
+$ git init
+$ git add .
+$ git commit -m "my django app"
+</pre>
+</div>
+<div class="section" id="desplegando-en-heroku">
+<h3>Desplegando en Heroku:</h3>
+<p>Vamos a empujar el repositorio de la aplicacion a Heroku. Primero debemos conseguir un lugar en heroku para alojarlo:</p>
+<pre class="literal-block">
+$ heroku create
+</pre>
+<p>Ahora podemos hacer un simple push para desplegar nuestra aplicación:</p>
+<pre class="literal-block">
+$ git push heroku master
+</pre>
+<p>Para visitar la aplicación en nuestro navegador:</p>
+<pre class="literal-block">
+$ heroku open
+</pre>
+</div>
+</div>
+    
+    <ul class="pager"><li class="previous">
+            <a href="el-repositorio-de-codigo.html">← Post anterior</a>
+        </li>
+    </ul><div id="disqus_thread"></div>
+        <script type="text/javascript">
+        var disqus_shortname ="nikolademo";
+            var disqus_url="http://smatht.github.io/alkiller//blog/el-proyecto-en-la-nube-de-heroku.html";
+        var disqus_title="El proyecto en la nube de Heroku";
+        var disqus_identifier="cache/posts/el-proyecto-en-la-nube-de-heroku.html";
+        var disqus_config = function () {
+            this.language = "es_ES";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+
+    </div>
+
+    </div>
+    </div>
+    <!--End of body content-->
+</div>
+<div class="footerbox">
+    Contenidos © 2013 <a href="mailto:matgs656@gmail.com">Matias G. Sticchi</a> - Powered by <a href="http://nikola.ralsina.com.ar">Nikola</a>
+</div>
+
+    <!-- Social buttons -->
+    <div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+    <a class="addthis_button_more">Share</a>
+    <ul><li><a class="addthis_button_facebook"></a>
+    </li><li><a class="addthis_button_google_plusone_share"></a>
+    </li><li><a class="addthis_button_linkedin"></a>
+    </li><li><a class="addthis_button_twitter"></a>
+    </li></ul></div>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script src="../assets/js/jquery-1.7.2.min.js" type="text/javascript"></script><script src="../assets/js/bootstrap.min.js" type="text/javascript"></script><script src="../assets/js/jquery.colorbox-min.js" type="text/javascript"></script><script type="text/javascript">jQuery("a.image-reference").colorbox({rel:"gal",maxWidth:"80%",maxHeight:"80%",scalePhotos:true});</script></body></html>
