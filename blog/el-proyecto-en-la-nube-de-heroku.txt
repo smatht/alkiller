@@ -1,0 +1,120 @@
+.. link: 
+.. description: 
+.. tags: 
+.. date: 2013/06/19 10:07:00
+.. title: El proyecto en la nube de Heroku
+.. slug: el-proyecto-en-la-nube-de-heroku
+
+El proyecto de Trabajo Final de Aplicacion ya se encuentra alojado en la nube de Heroku para el acceso publico: `<http://alkiller-inkiller.herokuapp.com/>`_
+
+.. figure:: http://siliconangle.com/files/2011/03/heroku.jpg
+   :target: http://siliconangle.com/files/2011/03/heroku.jpg
+   :class: thumbnail
+   :alt: Heroku deploy and scale powerful apps
+
+Heroku es una plataforma como servicio de computación en la Nube que soporta distintos lenguajes de programación. En este caso se esta alojando en el servidor una aplicación **Python** que utiliza el framework **Django.**
+
+Pasos para empezar con Django en Heroku
+---------------------------------------
+
+Esta guia fue extraida del devcenter de heroku `<https://devcenter.heroku.com/articles/django>`_.
+
+Prerequisitos:
+~~~~~~~~~~~~~~
+
+* Instalar `Heroku toolbelt. <https://toolbelt.heroku.com/>`_
+* Instalar `Python <http://python.org>`_ y `Virtualenv. <https://pypi.python.org/pypi/virtualenv>`_ Puede seguir `ésta guia. <http://docs.python-guide.org/en/latest/starting/install/linux/>`_
+* Tener instalada una versión de `Postgres <http://www.postgresql.org/>`_ en la máquina local.
+* Tener una `cuenta en Heroku. <https://id.heroku.com/signup/devcenter>`_
+
+Crear un Django app dentro de Virtualenv:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Creamos el entorno virtual:
+
+::
+
+	$ virtualenv venv --distribute
+	
+Para utilizar nuestro nuevo virtualenv, necesitamos activarlo.
+
+::
+
+	$ source venv/bin/activate
+
+A continuación, instalar las dependencias de nuestra aplicación con pip. En este caso, vamos a instalar Django (el framework de desarrollo web), Gunicorn (el servidor web), y el dj- base -url (un ayudante de configuración de Django):
+
+::
+
+	$ pip install Django psycopg2 gunicorn dj-database-url
+
+Ahora que tenemos un entorno Python limpio para trabajar, vamos a crear nuestra aplicación Django.
+
+::
+
+	django-admin.py startproject hellodjango .
+
+Declación de tipos de procesos con ProcFile:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Un `ProcFile, <https://devcenter.heroku.com/articles/procfile>`_ es un archivo de texto en el directorio raíz de la aplicación. Vamos a declarar explícitamente qué comando se debe ejecutar para iniciar un banco de pruebas web. En este caso, usted necesita para ejecutar Gunicorn con algunos argumentos.
+
+Cree un archivo (sin extención) llamado Procfile en el directorio raiz de su aplicación con el siguiente contenido:
+
+::
+
+	web: gunicorn hellodjango.wsgi
+
+Para iniciar el servidor web:
+
+::
+
+	$ foreman start
+
+Configuraciones Django:
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Pasamos a configurar la aplicacion para el funcionamiento en Heroku. Agregamos lo siguiente al final del archivo settings.py:
+
+.. code-block:: python
+
+	# Parse database configuration from $DATABASE_URL
+	import dj_database_url
+	DATABASES['default'] =  dj_database_url.config()
+
+	# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+	SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+Creando el repositorio Git:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Vamos a crear un nuevo repositorio git y guardar los cambios.
+
+::
+
+	$ git init
+	$ git add .
+	$ git commit -m "my django app"
+
+Desplegando en Heroku:
+~~~~~~~~~~~~~~~~~~~~~~
+
+Vamos a empujar el repositorio de la aplicacion a Heroku. Primero debemos conseguir un lugar en heroku para alojarlo:
+
+::
+
+	$ heroku create
+
+Ahora podemos hacer un simple push para desplegar nuestra aplicación:
+
+::
+
+	$ git push heroku master
+
+Para visitar la aplicación en nuestro navegador:
+
+::
+
+	$ heroku open
+
+
