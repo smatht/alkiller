@@ -1,5 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Proyecto Alkiller</title><link>http://smatht.github.io/alkiller/</link><description>Este es el blog del proyecto Alkiller</description><lastBuildDate>Tue, 18 Jun 2013 22:24:10 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Sistema de Administracion de Alquileres</title><link>http://smatht.github.io/alkiller//blog/sistema-de-administracion-de-alquileres.html</link><description>&lt;html&gt;&lt;body&gt;&lt;div class="section" id="la-idea"&gt;
+<rss version="2.0"><channel><title>Proyecto Alkiller</title><link>http://smatht.github.io/alkiller/</link><description>Este es el blog del proyecto Alkiller</description><lastBuildDate>Wed, 19 Jun 2013 12:48:02 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>El proyecto en la nube de Heroku</title><link>http://smatht.github.io/alkiller//blog/el-proyecto-en-la-nube-de-heroku.html</link><description>&lt;!-- link: --&gt;
+&lt;!-- description: --&gt;
+&lt;!-- tags: --&gt;
+&lt;!-- date: 2013/06/19 10:07:00 --&gt;
+&lt;!-- title: El proyecto en la nube de Heroku --&gt;
+&lt;!-- slug: el-proyecto-en-la-nube-de-heroku --&gt;
+&lt;p&gt;El proyecto de Trabajo Final de Aplicacion ya se encuentra alojado en la nube de Heroku para el acceso publico: &lt;a class="reference external" href="http://alkiller-inkiller.herokuapp.com/"&gt;http://alkiller-inkiller.herokuapp.com/&lt;/a&gt;&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;a class="reference external image-reference" href="http://siliconangle.com/files/2011/03/heroku.jpg"&gt;&lt;img alt="Heroku deploy and scale powerful apps" class="thumbnail" src="http://siliconangle.com/files/2011/03/heroku.jpg"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Heroku es una plataforma como servicio de computación en la Nube que soporta distintos lenguajes de programación. En este caso se esta alojando en el servidor una aplicación &lt;strong&gt;Python&lt;/strong&gt; que utiliza el framework &lt;strong&gt;Django.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="section" id="pasos-para-empezar-con-django-en-heroku"&gt;
+&lt;h2&gt;Pasos para empezar con Django en Heroku&lt;/h2&gt;
+&lt;p&gt;Esta guia fue extraida del devcenter de heroku &lt;a class="reference external" href="https://devcenter.heroku.com/articles/django"&gt;https://devcenter.heroku.com/articles/django&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="prerequisitos"&gt;
+&lt;h3&gt;Prerequisitos:&lt;/h3&gt;
+&lt;ul class="simple"&gt;&lt;li&gt;Instalar &lt;a class="reference external" href="https://toolbelt.heroku.com/"&gt;Heroku toolbelt.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Instalar &lt;a class="reference external" href="http://python.org"&gt;Python&lt;/a&gt; y &lt;a class="reference external" href="https://pypi.python.org/pypi/virtualenv"&gt;Virtualenv.&lt;/a&gt; Puede seguir &lt;a class="reference external" href="http://docs.python-guide.org/en/latest/starting/install/linux/"&gt;ésta guia.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tener instalada una versión de &lt;a class="reference external" href="http://www.postgresql.org/"&gt;Postgres&lt;/a&gt; en la máquina local.&lt;/li&gt;
+&lt;li&gt;Tener una &lt;a class="reference external" href="https://id.heroku.com/signup/devcenter"&gt;cuenta en Heroku.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
+&lt;div class="section" id="crear-un-django-app-dentro-de-virtualenv"&gt;
+&lt;h3&gt;Crear un Django app dentro de Virtualenv:&lt;/h3&gt;
+&lt;p&gt;Creamos el entorno virtual:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ virtualenv venv --distribute
+&lt;/pre&gt;
+&lt;p&gt;Para utilizar nuestro nuevo virtualenv, necesitamos activarlo.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ source venv/bin/activate
+&lt;/pre&gt;
+&lt;p&gt;A continuación, instalar las dependencias de nuestra aplicación con pip. En este caso, vamos a instalar Django (el framework de desarrollo web), Gunicorn (el servidor web), y el dj- base -url (un ayudante de configuración de Django):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pip install Django psycopg2 gunicorn dj-database-url
+&lt;/pre&gt;
+&lt;p&gt;Ahora que tenemos un entorno Python limpio para trabajar, vamos a crear nuestra aplicación Django.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+django-admin.py startproject hellodjango .
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="declacion-de-tipos-de-procesos-con-procfile"&gt;
+&lt;h3&gt;Declación de tipos de procesos con ProcFile:&lt;/h3&gt;
+&lt;p&gt;Un &lt;a class="reference external" href="https://devcenter.heroku.com/articles/procfile"&gt;ProcFile,&lt;/a&gt; es un archivo de texto en el directorio raíz de la aplicación. Vamos a declarar explícitamente qué comando se debe ejecutar para iniciar un banco de pruebas web. En este caso, usted necesita para ejecutar Gunicorn con algunos argumentos.&lt;/p&gt;
+&lt;p&gt;Cree un archivo (sin extención) llamado Procfile en el directorio raiz de su aplicación con el siguiente contenido:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+web: gunicorn hellodjango.wsgi
+&lt;/pre&gt;
+&lt;p&gt;Para iniciar el servidor web:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ foreman start
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="configuraciones-django"&gt;
+&lt;h3&gt;Configuraciones Django:&lt;/h3&gt;
+&lt;p&gt;Pasamos a configurar la aplicacion para el funcionamiento en Heroku. Agregamos lo siguiente al final del archivo settings.py:&lt;/p&gt;
+&lt;pre class="code python literal-block"&gt;
+&lt;span class="c"&gt;# Parse database configuration from $DATABASE_URL&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;dj_database_url&lt;/span&gt;
+&lt;span class="n"&gt;DATABASES&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'default'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="n"&gt;dj_database_url&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;config&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c"&gt;# Honor the 'X-Forwarded-Proto' header for request.is_secure()&lt;/span&gt;
+&lt;span class="n"&gt;SECURE_PROXY_SSL_HEADER&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'HTTP_X_FORWARDED_PROTO'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'https'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="creando-el-repositorio-git"&gt;
+&lt;h3&gt;Creando el repositorio Git:&lt;/h3&gt;
+&lt;p&gt;Vamos a crear un nuevo repositorio git y guardar los cambios.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ git init
+$ git add .
+$ git commit -m "my django app"
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="desplegando-en-heroku"&gt;
+&lt;h3&gt;Desplegando en Heroku:&lt;/h3&gt;
+&lt;p&gt;Vamos a empujar el repositorio de la aplicacion a Heroku. Primero debemos conseguir un lugar en heroku para alojarlo:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ heroku create
+&lt;/pre&gt;
+&lt;p&gt;Ahora podemos hacer un simple push para desplegar nuestra aplicación:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ git push heroku master
+&lt;/pre&gt;
+&lt;p&gt;Para visitar la aplicación en nuestro navegador:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ heroku open
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><guid>http://smatht.github.io/alkiller//blog/el-proyecto-en-la-nube-de-heroku.html</guid><pubDate>Wed, 19 Jun 2013 10:07:00 GMT</pubDate></item><item><title>El repositorio de codigo</title><link>http://smatht.github.io/alkiller//blog/el-repositorio-de-codigo.html</link><description>&lt;!-- link: --&gt;
+&lt;!-- description: --&gt;
+&lt;!-- tags: --&gt;
+&lt;!-- date: 2013/06/19 09:36:03 --&gt;
+&lt;!-- title: El repositorio de codigo --&gt;
+&lt;!-- slug: el-repositorio-de-codigo --&gt;
+&lt;p&gt;El repositorio de codigo (git) del proyecto ya esta alojado en Github con acceso publico &lt;a class="reference external" href="https://github.com/smatht/alkiller.git"&gt;https://github.com/smatht/alkiller.git&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Cualquier persona que quiera hacer contribuciones al codigo puede hacerlo haciendo un fork del repo. Aquí una &lt;a class="reference external" href="http://aprendegit.com/fork-de-repositorios-para-que-sirve/?goback=%2Egde_3956944_member_214176162"&gt;guia para hacer un fork.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Puede encontrar una guia de instalacion en el mismo repositorio.&lt;/p&gt;</description><guid>http://smatht.github.io/alkiller//blog/el-repositorio-de-codigo.html</guid><pubDate>Wed, 19 Jun 2013 09:36:03 GMT</pubDate></item><item><title>Sistema de Administracion de Alquileres</title><link>http://smatht.github.io/alkiller//blog/sistema-de-administracion-de-alquileres.html</link><description>&lt;!-- link: --&gt;
+&lt;!-- description: --&gt;
+&lt;!-- tags: --&gt;
+&lt;!-- date: 2013/06/18 23:30:33 --&gt;
+&lt;!-- title: Sistema de Administracion de Alquileres --&gt;
+&lt;!-- slug: sistema-de-administracion-de-alquileres --&gt;
+&lt;div class="section" id="la-idea"&gt;
 &lt;h2&gt;La idea:&lt;/h2&gt;
 &lt;p&gt;Se trata de desarrollar un software pensado para administrar alquileres de inmuebles (como departamentos, casas, cabañas, etc.) con todas las funcionalidades básicas para un eficiente desarrollo de la actividad y comunicación con los inquilinos, con guías visuales para nuevos usuarios.&lt;/p&gt;
 &lt;/div&gt;
@@ -17,4 +119,4 @@
 &lt;li&gt;&lt;strong&gt;Carrera:&lt;/strong&gt; &lt;em&gt;Licenciatura en Sistemas de Información&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Clasificación del trabajo:&lt;/strong&gt; &lt;em&gt;Desarrollo de aplicaciones/sistemas con la descripción de la metodología seguida en cada una de las etapas: especificación de requerimientos, diseño y desarrollo&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Área de trabajo según clasificación temática relacionada con la carrera:&lt;/strong&gt; &lt;em&gt;Ingeniería de Software para Sistemas Ubicuos y Móviles&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</description><guid>http://smatht.github.io/alkiller//blog/sistema-de-administracion-de-alquileres.html</guid><pubDate>Tue, 18 Jun 2013 23:30:33 GMT</pubDate></item></channel></rss>
+&lt;/ol&gt;&lt;/div&gt;</description><guid>http://smatht.github.io/alkiller//blog/sistema-de-administracion-de-alquileres.html</guid><pubDate>Tue, 18 Jun 2013 23:30:33 GMT</pubDate></item></channel></rss>
