@@ -1,0 +1,27 @@
+.. link: 
+.. description: 
+.. tags: 
+.. date: 2013/06/18 23:30:33
+.. title: Sistema de Administracion de Alquileres
+.. slug: sistema-de-administracion-de-alquileres
+
+
+La idea:
+--------
+Se trata de desarrollar un software pensado para administrar alquileres de inmuebles (como departamentos, casas, cabañas, etc.) con todas las funcionalidades básicas para un eficiente desarrollo de la actividad y comunicación con los inquilinos, con guías visuales para nuevos usuarios.
+
+Objetivos:
+----------
+* Desarrollar un Trabajo Final de Aplicación para la creación de un software de administración de inmuebles y mejorar con el mismo la comunicación propietario / inquilino
+* Implementar eficientemente el sistema de administración de inmuebles en una nube pública
+
+Metadatos del proyecto:
+-----------------------
+1. **Palabras claves del trabajo:** *Cloud computing, SaaS, Sistema Administrativo*
+2. **Profesor Orientador:** *Rios, Leopoldo José*
+3. **Apellido y nombres del alumno:** *Sticchi, Matias Guillermo*
+4. **Nro. de libreta:** *39316*
+5. **Carrera:** *Licenciatura en Sistemas de Información*
+6. **Clasificación del trabajo:** *Desarrollo de aplicaciones/sistemas con la descripción de la metodología seguida en cada una de las etapas: especificación de requerimientos, diseño y desarrollo*
+7. **Área de trabajo según clasificación temática relacionada con la carrera:** *Ingeniería de Software para Sistemas Ubicuos y Móviles*
+ 
