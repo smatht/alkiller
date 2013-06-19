@@ -5,6 +5,11 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
+  <loc>http://smatht.github.io/alkiller/</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
   <loc>http://smatht.github.io/alkiller/2013/</loc>
   <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
@@ -15,22 +20,47 @@
   <priority>0.5000</priority>
  </url>
  <url>
+  <loc>http://smatht.github.io/alkiller/archive.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/assets/</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/assets/css/</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/assets/css/images/</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/assets/css/images/ie6/</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/assets/img/</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/assets/js/</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
   <loc>http://smatht.github.io/alkiller/blog/</loc>
   <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://smatht.github.io/alkiller/blog/bienvenido-a-alkiller-blog.html</loc>
-  <lastmod>2013-06-18</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://smatht.github.io/alkiller/blog/index.html</loc>
-  <lastmod>2013-06-18</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://smatht.github.io/alkiller/blog/probando.html</loc>
+  <loc>http://smatht.github.io/alkiller/blog/sistema-de-administracion-de-alquileres.html</loc>
   <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
@@ -85,6 +115,16 @@
   <priority>0.5000</priority>
  </url>
  <url>
+  <loc>http://smatht.github.io/alkiller/images/</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://smatht.github.io/alkiller/index.html</loc>
+  <lastmod>2013-06-18</lastmod>
+  <priority>0.5000</priority>
+ </url>
+ <url>
   <loc>http://smatht.github.io/alkiller/listings/</loc>
   <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
@@ -100,12 +140,7 @@
   <priority>0.5000</priority>
  </url>
  <url>
-  <loc>http://smatht.github.io/alkiller/posts/bienvenido-a-alkiller-blog.html</loc>
-  <lastmod>2013-06-18</lastmod>
-  <priority>0.5000</priority>
- </url>
- <url>
-  <loc>http://smatht.github.io/alkiller/posts/probando.html</loc>
+  <loc>http://smatht.github.io/alkiller/posts/</loc>
   <lastmod>2013-06-18</lastmod>
   <priority>0.5000</priority>
  </url>
