@@ -1,0 +1,32 @@
+.. link: 
+.. description: 
+.. tags: 
+.. date: 2013/06/20 17:25:15
+.. title: mostrando
+.. slug: mostrando
+
+EL titulo del blog
+==================
+
+Y el subtitulo
+--------------
+
+Un parrafo
+
+	Y otro con **sangria**
+
+Y para mostrar codigo...
+
+::
+
+	$ subl mostrando.txt
+	$ subl mostrando.txt
+
+Chau...
+
+.. figure:: https://docs.djangoproject.com/s/img/site/hdr_logo.gif
+   :target: https://docs.djangoproject.com/s/img/site/hdr_logo.gif
+   :class: thumbnail
+   :alt: Heroku deploy and scale powerful apps
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et vehicula nulla. Maecenas rutrum at nibh quis hendrerit. Pellentesque consectetur, nunc ac auctor condimentum, augue tellus ultrices dui, a ultrices dui justo sit amet leo. Maecenas iaculis sit amet neque vel commodo. In vestibulum erat sit amet enim pulvinar bibendum. Nam cursus viverra nunc, sit amet lobortis nibh venenatis vitae. Quisque pellentesque, ipsum eu aliquam scelerisque, lorem ante vulputate dui, eu scelerisque nibh lacus sit amet enim.
