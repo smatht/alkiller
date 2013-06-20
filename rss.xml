@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Proyecto Alkiller</title><link>http://smatht.github.io/alkiller/</link><description>Este es el blog del proyecto Alkiller</description><lastBuildDate>Wed, 19 Jun 2013 12:48:02 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>El proyecto en la nube de Heroku</title><link>http://smatht.github.io/alkiller//blog/el-proyecto-en-la-nube-de-heroku.html</link><description>&lt;!-- link: --&gt;
+<rss version="2.0"><channel><title>Proyecto Alkiller</title><link>http://smatht.github.io/alkiller/</link><description>Este es el blog del proyecto Alkiller</description><lastBuildDate>Thu, 20 Jun 2013 17:32:45 GMT</lastBuildDate><generator>nikola</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>mostrando</title><link>http://smatht.github.io/alkiller//blog/mostrando.html</link><description>&lt;!-- link: --&gt;
+&lt;!-- description: --&gt;
+&lt;!-- tags: --&gt;
+&lt;!-- date: 2013/06/20 17:25:15 --&gt;
+&lt;!-- title: mostrando --&gt;
+&lt;!-- slug: mostrando --&gt;
+&lt;p&gt;Un parrafo&lt;/p&gt;
+&lt;blockquote&gt;
+Y otro con &lt;strong&gt;sangria&lt;/strong&gt;&lt;/blockquote&gt;
+&lt;p&gt;Y para mostrar codigo...&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ subl mostrando.txt
+$ subl mostrando.txt
+&lt;/pre&gt;
+&lt;p&gt;Chau...&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;a class="reference external image-reference" href="https://docs.djangoproject.com/s/img/site/hdr_logo.gif"&gt;&lt;img alt="Heroku deploy and scale powerful apps" class="thumbnail" src="https://docs.djangoproject.com/s/img/site/hdr_logo.gif"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et vehicula nulla. Maecenas rutrum at nibh quis hendrerit. Pellentesque consectetur, nunc ac auctor condimentum, augue tellus ultrices dui, a ultrices dui justo sit amet leo. Maecenas iaculis sit amet neque vel commodo. In vestibulum erat sit amet enim pulvinar bibendum. Nam cursus viverra nunc, sit amet lobortis nibh venenatis vitae. Quisque pellentesque, ipsum eu aliquam scelerisque, lorem ante vulputate dui, eu scelerisque nibh lacus sit amet enim.&lt;/p&gt;</description><guid>http://smatht.github.io/alkiller//blog/mostrando.html</guid><pubDate>Thu, 20 Jun 2013 17:25:15 GMT</pubDate></item><item><title>El proyecto en la nube de Heroku</title><link>http://smatht.github.io/alkiller//blog/el-proyecto-en-la-nube-de-heroku.html</link><description>&lt;!-- link: --&gt;
 &lt;!-- description: --&gt;
 &lt;!-- tags: --&gt;
 &lt;!-- date: 2013/06/19 10:07:00 --&gt;
