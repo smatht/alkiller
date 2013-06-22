@@ -11,6 +11,7 @@ urlpatterns = patterns('',
 	url(r'^$','core.views.lista_propiedades'),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^cuentas/', include('authtools.urls')),
 )
 
 # Cuando usamos otro servidor que no sea el de django

@@ -132,6 +132,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'core',
+    'authtools',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -170,3 +171,6 @@ DATABASES['default'] =  dj_database_url.config(default='postgres://sychbpusazmio
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Nuevo modelo de usuario
+AUTH_USER_MODEL = 'authtools.User'
